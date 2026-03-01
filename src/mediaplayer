@@ -628,7 +628,7 @@ def main():
     logger.debug("Arguments received {}".format(vars(arguments)))
 
     # Read configuration from file
-    fp = Path(sys.argv[0]).parent.resolve() / "config.json"
+    fp = Path(".").resolve() / "config.json"
     if not fp.is_file():
         logging.critical(f"ERROR: Configuration file {fp} not found")
         sys.exit(1)
