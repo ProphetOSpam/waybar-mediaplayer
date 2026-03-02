@@ -16,5 +16,7 @@
           ]))
       ];
     };
+
+    packages.${system}.default = pkgs.callPackage ./nix/package.nix {};
   };
 }
